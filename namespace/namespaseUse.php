@@ -1,5 +1,5 @@
 <?php ## Использование пространства имен
-namespace PHP7;
+//namespace PHP7;
 
 require_once __DIR__ . "/namespace.php";
 

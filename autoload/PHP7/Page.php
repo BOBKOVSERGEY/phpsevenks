@@ -1,16 +1,14 @@
-<?php ## Объявление пространства имен
-//namespace PHP7;
-// отладочная функция
-function debug($obj)
-{
-  echo '<pre>';
-  var_dump($obj);
-  echo '</pre>';
-}
+<?php
+
+namespace PHP7;
+
+use PHP7\Seo as Seo;
+use PHP7\Tag as Tag;
 
 // класс страницы
-
 class Page {
+
+  use Seo, Tag;
   // заголовок
   protected $title;
 
@@ -23,5 +21,6 @@ class Page {
     echo $this->title = $title;
     echo "<br>";
     echo $this->content = $content;
+    echo "<br>";
   }
 }
