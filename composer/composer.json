@@ -1,0 +1,6 @@
+{
+  "require": {
+    "monolog/monolog": "^1.23",
+    "psy/psysh": "^0.8.17"
+  }
+}
