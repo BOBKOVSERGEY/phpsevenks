@@ -12,7 +12,8 @@
 if ($_REQUEST['doUpload'])
   echo '<pre>Содержимое $_FILES: ' . print_r($_FILES, true) . '</pre><hr>';
 // копируем полученный файл на новое место
-copy($_FILES['file']['tmp_name'], $_FILES['file']['name']);
+if ($_FILES['file']['error'] === 0)
+  copy($_FILES['file']['tmp_name'], $_FILES['file']['name']);
 ?>
 <p>Выберите какой нибудь файл</p>
 <form action="<?php $_SERVER['SCRIPT_NAME']?>" method="post" enctype="multipart/form-data">
